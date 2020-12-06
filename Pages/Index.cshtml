@@ -1,4 +1,9 @@
 ﻿@page
 @model IndexModel
 
-<h1>Howdy, World!</h1>
+<ul>
+    @foreach (var thread in Model.Threads)
+    {
+        <li>/@Html.DisplayFor(modelItem => thread.Slug)/ - @Html.DisplayFor(modelItem => thread.Title)</li>
+    }
+</ul>

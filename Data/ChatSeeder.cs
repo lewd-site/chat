@@ -1,4 +1,5 @@
 ﻿using Chat.Models;
+using System;
 using System.Linq;
 
 namespace Chat.Data
@@ -9,17 +10,31 @@ namespace Chat.Data
         {
             context.Database.EnsureCreated();
 
-            if (context.Threads.Any())
+            if (!context.Threads.Any())
             {
-                return;
+                var threads = new Thread[] {
+                    new Thread{ Slug = "general", Title = "Основной", Icon = "home" },
+                    new Thread{ Slug = "po", Title = "Политика", Icon = "chat" },
+                };
+
+                context.Threads.AddRange(threads);
             }
 
-            var threads = new Thread[] {
-                new Thread{ Slug = "general", Title = "Основной", Icon = "home" },
-                new Thread{ Slug = "po", Title = "Политика", Icon = "chat" },
-            };
+            if (!context.Users.Any())
+            {
+                var users = new User[] {
+                    new User{
+                        Name = "Anonymous",
+                        Email = "test@example.com",
+                        EmailConfirmed = true,
+                        PasswordHash = BCrypt.Net.BCrypt.HashPassword("password", 10),
+                        CreatedAt = DateTimeOffset.UtcNow,
+                    },
+                };
 
-            context.Threads.AddRange(threads);
+                context.Users.AddRange(users);
+            }
+
             context.SaveChanges();
         }
     }

@@ -1,0 +1,22 @@
+﻿@page
+@model LoginModel
+
+<form method="post">
+    <div>
+        <label asp-for="Login.Name"></label>
+        <input asp-for="Login.Name" />
+        <span asp-validation-for="Login.Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="Login.Password"></label>
+        <input asp-for="Login.Password" />
+        <span asp-validation-for="Login.Password"></span>
+    </div>
+
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div>
+        <button type="submit">Login</button>
+    </div>
+</form>

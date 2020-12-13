@@ -1,0 +1,34 @@
+﻿@page
+@model RegisterModel
+
+<form method="post">
+    <div>
+        <label asp-for="Register.Name"></label>
+        <input asp-for="Register.Name" />
+        <span asp-validation-for="Register.Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="Register.Email"></label>
+        <input asp-for="Register.Email" />
+        <span asp-validation-for="Register.Email"></span>
+    </div>
+
+    <div>
+        <label asp-for="Register.Password"></label>
+        <input asp-for="Register.Password" />
+        <span asp-validation-for="Register.Password"></span>
+    </div>
+
+    <div>
+        <label asp-for="Register.ConfirmPassword"></label>
+        <input asp-for="Register.ConfirmPassword" />
+        <span asp-validation-for="Register.ConfirmPassword"></span>
+    </div>
+
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>

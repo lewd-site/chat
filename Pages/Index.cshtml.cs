@@ -1,5 +1,6 @@
 using Chat.Data;
 using Chat.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -18,9 +19,11 @@ namespace Chat.Pages
             _context = context;
         }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
             Threads = await _context.Threads.ToListAsync();
+
+            return Page();
         }
     }
 }

@@ -8,5 +8,6 @@ namespace Chat.Data
         public ChatContext(DbContextOptions<ChatContext> options) : base(options) { }
 
         public DbSet<Thread> Threads { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

@@ -1,9 +1,16 @@
 ﻿@page
 @model IndexModel
 
-<ul>
-    @foreach (var thread in Model.Threads)
-    {
-        <li>/@Html.DisplayFor(modelItem => thread.Slug)/ - @Html.DisplayFor(modelItem => thread.Title)</li>
-    }
-</ul>
+<div class="layout relative mx-auto">
+    <aside class="hidden lg:block absolute top-0 -left-48 w-44">
+        <ul class="text-lg font-semibold">
+            @foreach (var thread in Model.Threads)
+            {
+                <li class="mb-4 rounded-full bg-gray-darker px-4 py-2">@Html.DisplayFor(modelItem => thread.Title)</li>
+            }
+        </ul>
+    </aside>
+
+    <main>
+    </main>
+</div>

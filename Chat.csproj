@@ -6,6 +6,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="styles\fonts\opensans-bold-webfont.woff" />
+    <Content Include="styles\fonts\opensans-bold-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-bolditalic-webfont.woff" />
+    <Content Include="styles\fonts\opensans-bolditalic-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-extrabold-webfont.woff" />
+    <Content Include="styles\fonts\opensans-extrabold-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-extrabolditalic-webfont.woff" />
+    <Content Include="styles\fonts\opensans-extrabolditalic-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-italic-webfont.woff" />
+    <Content Include="styles\fonts\opensans-italic-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-light-webfont.woff" />
+    <Content Include="styles\fonts\opensans-light-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-lightitalic-webfont.woff" />
+    <Content Include="styles\fonts\opensans-lightitalic-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-regular-webfont.woff" />
+    <Content Include="styles\fonts\opensans-regular-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-semibold-webfont.woff" />
+    <Content Include="styles\fonts\opensans-semibold-webfont.woff2" />
+    <Content Include="styles\fonts\opensans-semibolditalic-webfont.woff" />
+    <Content Include="styles\fonts\opensans-semibolditalic-webfont.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
     <PackageReference Include="EFCore.NamingConventions" Version="5.0.0-rc1" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.0" />

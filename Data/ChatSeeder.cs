@@ -30,8 +30,18 @@ namespace Chat.Data
             if (!context.Threads.Any())
             {
                 var threads = new Thread[] {
-                    new Thread { Slug = "general", Title = "Основной", Icon = "sidebar-general" },
-                    new Thread { Slug = "po", Title = "Политика", Icon = "sidebar-po" },
+                    new Thread {
+                        Slug = "general",
+                        Title = "Основной",
+                        Icon = "sidebar-general" ,
+                        IsDefault = true,
+                    },
+                    new Thread {
+                        Slug = "po",
+                        Title = "Политика",
+                        Icon = "sidebar-po",
+                        IsDefault = false,
+                    },
                 };
 
                 context.Threads.AddRange(threads);

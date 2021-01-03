@@ -1,6 +1,7 @@
 using Chat.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Linq;
 
 namespace Chat.Pages
 {
@@ -13,9 +14,15 @@ namespace Chat.Pages
             _context = context;
         }
 
-        public IActionResult OnGetAsync()
+        public IActionResult OnGet()
         {
-            return Page();
+            var thread = _context.Threads.FirstOrDefault(thread => thread.IsDefault);
+            if (thread == null)
+            {
+                return Page();
+            }
+
+            return Redirect($"/{thread.Slug}");
         }
     }
 }

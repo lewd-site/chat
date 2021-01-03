@@ -76,4 +76,80 @@
     max-width: 800px;
 }
 
+.sidebar-logo {
+    @apply mx-4 block;
+    background-image: url('./images/sidebar_logo.svg');
+    width: 111px;
+    height: 29px;
+    margin-top: 10px;
+    margin-bottom: 37px;
+}
+
+.sidebar-item {
+    @apply mb-4 rounded-full px-4 py-2 last:mb-0;
+}
+
+.sidebar-item-active {
+    @apply bg-gray-darker sidebar-item;
+}
+
+.sidebar-item-link {
+    @apply flex items-center;
+}
+
+.sidebar-anime,
+.sidebar-cinema,
+.sidebar-general,
+.sidebar-message,
+.sidebar-po,
+.sidebar-profile,
+.sidebar-settings {
+    @apply mr-4 inline-block bg-gray-light group-hover:bg-gray-lighter transition-colors ease-in-out;
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-item-active.sidebar-item-active .sidebar-anime,
+.sidebar-item-active.sidebar-item-active .sidebar-cinema,
+.sidebar-item-active.sidebar-item-active .sidebar-general,
+.sidebar-item-active.sidebar-item-active .sidebar-message,
+.sidebar-item-active.sidebar-item-active .sidebar-po,
+.sidebar-item-active.sidebar-item-active .sidebar-profile,
+.sidebar-item-active.sidebar-item-active .sidebar-settings {
+    @apply bg-orange;
+}
+
+.sidebar-anime {
+    mask-image: url('./images/sidebar_anime.svg');
+}
+
+.sidebar-cinema {
+    mask-image: url('./images/sidebar_cinema.svg');
+}
+
+.sidebar-general {
+    mask-image: url('./images/sidebar_general.svg');
+}
+
+.sidebar-message {
+    mask-image: url('./images/sidebar_message.svg');
+    width: 25px;
+}
+
+.sidebar-po {
+    mask-image: url('./images/sidebar_po.svg');
+}
+
+.sidebar-profile {
+    mask-image: url('./images/sidebar_profile.svg');
+}
+
+.sidebar-settings {
+    mask-image: url('./images/sidebar_settings.svg');
+}
+
+.sidebar-divider {
+    @apply border-gray-border mx-8 my-3;
+}
+
 @tailwind screens;

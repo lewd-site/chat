@@ -1,10 +1,6 @@
 using Chat.Data;
-using Chat.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Chat.Pages
 {
@@ -12,17 +8,13 @@ namespace Chat.Pages
     {
         private readonly ChatContext _context;
 
-        public IList<Thread> Threads { get; set; }
-
         public IndexModel(ChatContext context)
         {
             _context = context;
         }
 
-        public async Task<IActionResult> OnGetAsync()
+        public IActionResult OnGetAsync()
         {
-            Threads = await _context.Threads.ToListAsync();
-
             return Page();
         }
     }

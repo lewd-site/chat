@@ -15,11 +15,14 @@ module.exports = {
         colors: {
             white: '#EEEEEE',
             gray: {
+                lighter: '#cfd4e3',
                 light: '#9DA2B2',
                 DEFAULT: '#43474F',
                 dark: '#36393F',
                 darker: '#303339',
+                border: '#44474E',
             },
+            orange: '#E3833D',
         },
         fontFamily: {
             'sans': [
@@ -30,7 +33,9 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            margin: ['last'],
+        },
     },
     plugins: [],
 };

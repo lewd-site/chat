@@ -11,7 +11,7 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
             },
             {
-                test: /\.woff2?$/i,
+                test: /\.(svg|woff2?)$/i,
                 type: 'asset',
             },
         ],

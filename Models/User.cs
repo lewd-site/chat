@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Chat.Models
@@ -18,6 +19,10 @@ namespace Chat.Models
         [Required, MaxLength(255)]
         public string PasswordHash { get; set; }
 
+        [Required]
         public DateTimeOffset CreatedAt { get; set; }
+
+        public List<File> Files { get; set; } = new List<File>();
+        public List<Post> Posts { get; set; } = new List<Post>();
     }
 }

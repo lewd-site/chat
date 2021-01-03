@@ -13,7 +13,15 @@
 </head>
 
 <body class="bg-gray-dark text-white">
-    @RenderBody()
+    <div class="layout relative mx-auto">
+        <aside class="hidden lg:block absolute top-0 -left-52 w-48">
+            @await Component.InvokeAsync("Sidebar")
+        </aside>
+
+        <main>
+            @RenderBody()
+        </main>
+    </div>
 </body>
 
 </html>

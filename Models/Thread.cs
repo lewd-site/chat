@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Chat.Models
 {
@@ -14,5 +15,7 @@ namespace Chat.Models
 
         [Required, MaxLength(255)]
         public string Icon { get; set; }
+
+        public List<Post> Posts { get; set; } = new List<Post>();
     }
 }

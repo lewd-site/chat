@@ -19,6 +19,6 @@ namespace Chat.Models
         [Required]
         public bool IsDefault { get; set; }
 
-        public List<Post> Posts { get; set; } = new List<Post>();
+        public List<Post> Posts { get; set; }
     }
 }

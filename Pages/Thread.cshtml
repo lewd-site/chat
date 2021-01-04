@@ -1,4 +1,26 @@
 ﻿@page "/{slug}"
 @model ThreadModel
 
-<h1>@Html.DisplayFor(modelItem => modelItem.Thread.Title)</h1>
+@foreach (var post in Model.Posts)
+{
+    <section class="post mb-4">
+        <div class="post-header">
+            <span class="post-author mr-2">
+                <span class="post-name">@Html.DisplayFor(model => post.Name)</span>
+                <span class="post-tripcode">@Html.DisplayFor(model => post.Tripcode)</span>
+            </span>
+
+            <span class="post-no mr-2">@Html.DisplayFor(model => post.Id)</span>
+            <span class="post-date mr-4">@(post.CreatedAt.ToString("HH:mm:ss dd.MM.yyyy"))</span>
+        </div>
+
+        @foreach (var section in post.PostSections.OrderBy(section => section.Id).ToList())
+        {
+            <div class="post-section">
+                <div>@Html.DisplayFor(model => section.Message)</div>
+            </div>
+        }
+
+        <div class="post-footer"></div>
+    </section>
+}

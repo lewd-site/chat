@@ -86,7 +86,7 @@
 }
 
 .sidebar-item {
-    @apply mb-4 rounded-full px-4 py-2 last:mb-0;
+    @apply mb-4 rounded-full px-4 py-2 last:mb-0 hover:bg-gray-darker transition-colors ease-in-out;
 }
 
 .sidebar-item-active {
@@ -149,7 +149,51 @@
 }
 
 .sidebar-divider {
-    @apply border-gray-border mx-8 my-3;
+    @apply border-gray-sidebar-divider mx-8 my-3;
 }
+
+.post {
+    @apply rounded-md bg-gray;
+}
+
+.post-header {
+    @apply flex items-baseline pt-4 px-4 pb-2;
+}
+
+.post-author {
+    @apply flex items-baseline text-lg font-semibold;
+}
+
+.post-tripcode:not(:empty)::before {
+    content: '!';
+}
+
+.post-no {
+    @apply text-orange;
+}
+
+    .post-no::before {
+        content: '№';
+    }
+
+.post-date {
+    @apply text-gray-post-date;
+}
+
+.post-section {
+    @apply p-4 border-gray-section-divider;
+}
+
+    .post-section + .post-section {
+        @apply border-t;
+    }
+
+.post-footer {
+    @apply text-sm;
+}
+
+    .post-footer:not(:empty) {
+        @apply px-4 pb-4;
+    }
 
 @tailwind screens;

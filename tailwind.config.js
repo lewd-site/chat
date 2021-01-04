@@ -15,12 +15,14 @@ module.exports = {
         colors: {
             white: '#EEEEEE',
             gray: {
-                lighter: '#cfd4e3',
+                lighter: '#CFD4E3',
+                'post-date': '#A9A9A9',
                 light: '#9DA2B2',
+                'sidebar-divider': '#44474E',
                 DEFAULT: '#43474F',
                 dark: '#36393F',
                 darker: '#303339',
-                border: '#44474E',
+                'section-divider': '#2F3237',
             },
             orange: '#E3833D',
         },

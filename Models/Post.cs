@@ -28,6 +28,6 @@ namespace Chat.Models
         [Required]
         public DateTimeOffset UpdatedAt { get; set; }
 
-        public List<PostSection> PostSections { get; set; } = new List<PostSection>();
+        public List<PostSection> PostSections { get; set; }
     }
 }

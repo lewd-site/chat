@@ -25,6 +25,6 @@ namespace Chat.Models
         [Required]
         public DateTimeOffset CreatedAt { get; set; }
 
-        public List<PostSectionFile> PostSectionFiles { get; set; } = new List<PostSectionFile>();
+        public List<PostSectionFile> PostSectionFiles { get; set; }
     }
 }

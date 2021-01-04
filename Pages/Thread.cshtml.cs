@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Chat.Pages
@@ -22,14 +23,18 @@ namespace Chat.Pages
 
         public async Task<IActionResult> OnGetAsync(string slug)
         {
-            Thread = await _context.Threads.FirstOrDefaultAsync(thread => thread.Slug == slug);
+            Thread = await _context.Threads.Include(thread => thread.Posts)
+                .ThenInclude(post => post.PostSections)
+                .ThenInclude(section => section.PostSectionFiles)
+                .AsSplitQuery()
+                .FirstOrDefaultAsync(thread => thread.Slug == slug);
 
             if (Thread == null)
             {
                 return NotFound();
             }
 
-            Posts = Thread.Posts;
+            Posts = Thread.Posts.OrderBy(post => post.Id).ToList();
 
             return Page();
         }

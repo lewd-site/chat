@@ -18,6 +18,7 @@ module.exports = {
                 lighter: '#CFD4E3',
                 'post-date': '#A9A9A9',
                 light: '#9DA2B2',
+                'header-divider': '#454951',
                 'sidebar-divider': '#44474E',
                 DEFAULT: '#43474F',
                 dark: '#36393F',

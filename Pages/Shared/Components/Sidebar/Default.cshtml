@@ -10,7 +10,7 @@
         {
             <li class="group @(Context.Request.Path.ToString() == $"/{thread.Slug}" ? "sidebar-item-active" : "sidebar-item")">
                 <a class="sidebar-item-link" href="/@thread.Slug">
-                    <span class="@thread.Icon"></span>
+                    <span class="@thread.Icon mr-4"></span>
                     <span>@Html.DisplayFor(modelItem => thread.Title)</span>
                 </a>
             </li>
@@ -22,21 +22,21 @@
     <ul>
         <li class="group @(Context.Request.Path.ToString() == $"/messages" ? "sidebar-item-active" : "sidebar-item")">
             <a class="sidebar-item-link" href="/messages">
-                <span class="sidebar-message"></span>
+                <span class="sidebar-message mr-4"></span>
                 <span>Сообщения</span>
             </a>
         </li>
 
         <li class="group @(Context.Request.Path.ToString() == $"/profile" ? "sidebar-item-active" : "sidebar-item")">
             <a class="sidebar-item-link" href="/profile">
-                <span class="sidebar-profile"></span>
+                <span class="sidebar-profile mr-4"></span>
                 <span>Профиль</span>
             </a>
         </li>
 
         <li class="group @(Context.Request.Path.ToString() == $"/settings" ? "sidebar-item-active" : "sidebar-item")">
             <a class="sidebar-item-link" href="/settings">
-                <span class="sidebar-settings"></span>
+                <span class="sidebar-settings mr-4"></span>
                 <span>Настройки</span>
             </a>
         </li>

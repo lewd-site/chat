@@ -12,6 +12,20 @@
 
             <span class="post-no mr-2">@Html.DisplayFor(model => post.Id)</span>
             <span class="post-date mr-4">@(post.CreatedAt.ToString("HH:mm:ss dd.MM.yyyy"))</span>
+
+            <span class="post-buttons">
+                <button class="mr-2">
+                    <span class="post-reply"></span>
+                </button>
+
+                <button class="mr-2">
+                    <span class="post-im"></span>
+                </button>
+
+                <button>
+                    <span class="post-actions"></span>
+                </button>
+            </span>
         </div>
 
         @foreach (var section in post.PostSections.OrderBy(section => section.Id).ToList())

@@ -76,13 +76,60 @@
     max-width: 800px;
 }
 
+.header {
+    @apply fixed w-full z-10 bg-gray-dark flex justify-between items-center;
+    max-width: 800px;
+    height: 40px;
+}
+
+.header-button {
+    @apply p-3;
+}
+
+.header-divider {
+    @apply block w-px bg-gray-header-divider;
+    height: 19px;
+}
+
+.header-notify,
+.header-link,
+.header-image,
+.header-settings {
+    @apply block bg-gray-light hover:bg-gray-lighter transition-colors ease-in-out;
+    width: 16px;
+    height: 16px;
+}
+
+.header-notify {
+    mask-image: url('./images/header-notify.svg');
+    width: 14px;
+}
+
+.header-link {
+    mask-image: url('./images/header-link.svg');
+}
+
+.header-image {
+    mask-image: url('./images/header-image.svg');
+    width: 19px;
+}
+
+.header-settings {
+    mask-image: url('./images/header-settings.svg');
+}
+
+.sidebar {
+    @apply hidden lg:block fixed top-0 w-48;
+    left: calc(50vw - 620px);
+}
+
 .sidebar-logo {
-    @apply mx-4 block;
-    background-image: url('./images/sidebar_logo.svg');
-    width: 111px;
-    height: 29px;
-    margin-top: 10px;
-    margin-bottom: 37px;
+    @apply block;
+    background-image: url('./images/sidebar-logo.svg');
+    width: 153px;
+    height: 41px;
+    margin-top: 19px;
+    margin-bottom: 16px;
 }
 
 .sidebar-item {
@@ -104,7 +151,7 @@
 .sidebar-po,
 .sidebar-profile,
 .sidebar-settings {
-    @apply mr-4 inline-block bg-gray-light group-hover:bg-gray-lighter transition-colors ease-in-out;
+    @apply inline-block bg-gray-light group-hover:bg-gray-lighter transition-colors ease-in-out;
     width: 20px;
     height: 20px;
 }
@@ -120,32 +167,32 @@
 }
 
 .sidebar-anime {
-    mask-image: url('./images/sidebar_anime.svg');
+    mask-image: url('./images/sidebar-anime.svg');
 }
 
 .sidebar-cinema {
-    mask-image: url('./images/sidebar_cinema.svg');
+    mask-image: url('./images/sidebar-cinema.svg');
 }
 
 .sidebar-general {
-    mask-image: url('./images/sidebar_general.svg');
+    mask-image: url('./images/sidebar-general.svg');
 }
 
 .sidebar-message {
-    mask-image: url('./images/sidebar_message.svg');
+    mask-image: url('./images/sidebar-message.svg');
     width: 25px;
 }
 
 .sidebar-po {
-    mask-image: url('./images/sidebar_po.svg');
+    mask-image: url('./images/sidebar-po.svg');
 }
 
 .sidebar-profile {
-    mask-image: url('./images/sidebar_profile.svg');
+    mask-image: url('./images/sidebar-profile.svg');
 }
 
 .sidebar-settings {
-    mask-image: url('./images/sidebar_settings.svg');
+    mask-image: url('./images/sidebar-settings.svg');
 }
 
 .sidebar-divider {
@@ -157,7 +204,7 @@
 }
 
 .post-header {
-    @apply flex items-baseline pt-4 px-4 pb-2;
+    @apply flex items-baseline pt-4 px-4 pb-1;
 }
 
 .post-author {
@@ -179,6 +226,31 @@
 .post-date {
     @apply text-gray-post-date;
 }
+
+.post-buttons {
+    @apply self-center flex items-center leading-none;
+}
+
+.post-reply,
+.post-im,
+.post-actions {
+    @apply block bg-gray-light hover:bg-gray-lighter transition-colors ease-in-out;
+    width: 34px;
+    height: 30px;
+}
+
+.post-reply {
+    mask-image: url('./images/post-reply.svg');
+}
+
+.post-im {
+    mask-image: url('./images/post-im.svg');
+}
+
+.post-actions {
+    mask-image: url('./images/post-actions.svg');
+}
+
 
 .post-section {
     @apply p-4 border-gray-section-divider;

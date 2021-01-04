@@ -14,11 +14,40 @@
 
 <body class="bg-gray-dark text-white">
     <div class="layout relative mx-auto">
-        <aside class="hidden lg:block absolute top-0 -left-52 w-48">
+        <header class="header">
+            <div class="flex items-center">
+                <button class="header-button">
+                    <span class="header-notify"></span>
+                </button>
+
+                <span class="header-divider"></span>
+
+                <button class="header-button">
+                    <span class="header-link"></span>
+                </button>
+
+                <button class="header-button">
+                    <span class="header-image"></span>
+                </button>
+            </div>
+
+            <div class="flex items-center">
+                <button class="px-5 py-2 text-sm hover:bg-gray-darker">Регистрация</button>
+                <button class="px-5 py-2 text-sm hover:bg-gray-darker">Войти</button>
+
+                <span class="header-divider"></span>
+
+                <button class="header-button">
+                    <span class="header-settings"></span>
+                </button>
+            </div>
+        </header>
+
+        <aside class="sidebar">
             @await Component.InvokeAsync("Sidebar")
         </aside>
 
-        <main>
+        <main class="pt-10">
             @RenderBody()
         </main>
     </div>
